@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile – Benz Simple LinkTree</title>
+
+  <link rel="icon" href="data:image/svg+xml,
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+  <circle cx='50' cy='50' r='45' fill='%238b5cf6'/>
+  </svg>">
+
+  <style>
+    body {
+      background: #050509;
+      color: white;
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,
+        Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .brand-logo {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, #8b5cf6, #6366f1);
+      box-shadow: 0 0 14px rgba(99,102,241,.55);
+      display: inline-block;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    #linksContainer {
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    .link-button {
+      background: #1d1d20;
+      border: 1px solid #2c2c2f;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 14px;
+      font-size: 16px;
+      color: white;
+      text-decoration: none;
+      display: block;
+      transition: .15s;
+    }
+
+    .link-button:hover {
+      background: #27272a;
+      transform: translateY(-2px);
+    }
+
+    #error {
+      color: #fca5a5;
+      margin-top: 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="brand-logo"></div>
+  <h1 id="usernameTitle">Profile</h1>
+
+  <div id="linksContainer"></div>
+  <p id="error"></p>
+
+  <script src="public.js"></script>
+</body>
+</html>

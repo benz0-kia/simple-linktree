@@ -26,6 +26,25 @@ app.post("/login", (req, res) => {
   res.json({ success: true, message: "Logged in" });
 });
 
+// REGISTER a new user
+app.post("/register", (req, res) => {
+  const { username, password } = req.body;
+
+  if (!username || !password) {
+    return res.status(400).json({ error: "Missing username or password" });
+  }
+
+  if (users[username]) {
+    return res.status(400).json({ error: "User already exists" });
+  }
+
+  users[username] = { password, links: [] };
+  saveUsers();
+
+  res.json({ success: true, message: "User created" });
+});
+
+
 // GET links for a profile
 app.get("/:username", (req, res) => {
   const user = users[req.params.username];
